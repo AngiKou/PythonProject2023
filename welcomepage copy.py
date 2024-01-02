@@ -1,6 +1,6 @@
 import tkinter as tk
 import random
-
+import ttkbootstrap as ttk
 
 class WelcomePage():
     def __init__(self,root_welcomepage):
@@ -32,9 +32,9 @@ class WelcomePage():
         self.canvas.create_text(750,450,text = self.quote,font=('Open Sans',30,'bold'),fill='black')#Δημιουργια κειμενου με text το τυχαιο quote και συνθηκες ωστε να βγαινει στην μεση της σελιδας
         
         #Δημιουργια των κουμπιων 'Exit' 'Show Statistics' και 'Entry'
-        self.b1 = tk.Button(self.w,text='Exit',font=('Arial',20),command = self.b1_pushed, bg = '#e4d6ff',fg = 'black') 
-        self.b2 = tk.Button(self.w,text='Show Statistics',font=('Arial',20),command= self.b2_pushed, bg = '#e4d6ff',fg='black')
-        self.b3 = tk.Button(self.w,text='Entry',font=('Arial',20),command = self.b2_pushed)
+        self.b1 = ttk.Button(self.w,bootstyle="light",text='Exit',font=('Arial',20),command = self.b1_pushed, bg = '#e4d6ff',fg = 'black') 
+        self.b2 = ttk.Button(self.w,bootstyle="light",text='Show Statistics',font=('Arial',20),command= self.b2_pushed, bg = '#e4d6ff',fg='black')
+        self.b3 = ttk.Button(self.w,bootstyle="light",text='Entry',font=('Arial',20),command = self.b2_pushed)
         
         #Τοποθετηση των κουμπιων στον κανβα
         self.b1_canvas = self.canvas.create_window(15,800,anchor='nw',window=self.b1) 
