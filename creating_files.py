@@ -71,7 +71,7 @@ def save_content_to_files (statistics_content,calendar_notes_content):
 
     #print(f"Content saved to 'statistics.txt' and 'calendar_notes.txt'.")
    
-def save_file():  #date_picked
+def save_file(date_picked):  #date_picked
     #file_name=date_picked
     #emotion_list=list_data
     #emotion_text=text
