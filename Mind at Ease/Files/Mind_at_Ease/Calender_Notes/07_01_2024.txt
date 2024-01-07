@@ -1,0 +1,1 @@
+{"emotion_list": ["test", "", "", "", "", "", "", "", "", ""], "emotion_text": "    test\n\n\n"}
