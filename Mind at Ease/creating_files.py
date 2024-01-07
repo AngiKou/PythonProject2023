@@ -1,3 +1,4 @@
+
 import os
 import json
 from pathlib import Path
@@ -49,6 +50,7 @@ def create_folder_files():
         calender_statistics_file.write("These are the calender \n")
 
 
+# Συνάρτηση δεν χρησιμοποιείται
 # Συναρτηση αποθηκευσης των δεδομενων του calender
 def save_content_to_files(statistics_content, calendar_notes_content):
     folder_name_4 = "Calender_Statistics"
@@ -85,11 +87,8 @@ def save_file(date_picked, emotion_list, emotion_text):  # date_picked
     # Data_dic = {"anna": 123456, "maria": 23456}
 
     folder = Path(__file__).parent
-    # root_foler = Path(folder).parent
-    # file_data = Path(root_foler, "Files", folder_name_7, f"{file_name}.txt")
-    # file_data = Path(root_foler, "Files", "Mind_at_Ease", folder_name_7, "test.txt")
     file_data = Path(folder, "Files", "Mind_at_Ease", folder_name_7, f"{file_name}.txt")
-    # print(file_data)
+   
     with open(file_data, "w") as f:
         json.dump(Data_dic, f)
 
@@ -105,7 +104,7 @@ def convert_to_date(file_name):
     return datetime.strptime(date_string, "%d_%m_%Y")
 
 
-# .strftime("%d/%m/%Y")
+
 
 
 # Function to count files where one is after the other based on date
@@ -161,4 +160,4 @@ if __name__ == "__main__":
     save_file("18/11/2023", ["1", "2", "3"], "text")
     result = count_files_with_later_dates()
 
-    # print(result)
+   
