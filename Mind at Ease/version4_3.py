@@ -197,7 +197,7 @@ def giannisapp():
         def __init__(self, root):
             super().__init__()
             self.w = root
-            self.w.resizable(0, 0)
+            self.w.resizable(0, 0)#δεν επιτρέπει στον χρήστη να επεξεργαστεί την γεωμετρια του παραθυρου
             self.w.geometry("715x742")  # Θέτω το μέγεθος του παραθύρου σε 800x775
             self.w.title("Mind at Ease")  # Ορίζω τον τίτλο του παραθύρου
             self.w.configure(bg="#e1c9f8")  # Ορίζω το χρώμα του παραθύρου
@@ -422,20 +422,20 @@ def giannisapp():
 # app_giannis.textvar
 
 
-"""HEKLIS"""
-import random
-from pathlib import Path
+"""DIONYSHS"""
+import random #Κάνω import την random για χρήση της στο τυχαίο quote
+from pathlib import Path #Κάνω import την Path απτην pathlib για το path του background 
 
 
-class WelcomePage:
+class WelcomePage:#Δημιουργία της κλάσης του παραθύρου
     def __init__(self, root_welcomepage):
-        self.w = root_welcomepage
-        self.w.title("Mind at Ease")
-        self.w.geometry("1500x900")
+        self.w = root_welcomepage #Δημιουργια παραθυρου
+        self.w.title("Mind at Ease")#Τοποθέτηση τιτλου παραθύρου
+        self.w.geometry("1500x900")#Επεξεργασία της γεωμετρία του παραθύρου
         self.w.resizable(
             0, 0
         )  # Δεν επιτρεπει στον χρηστη να μπορει να κανει μεγενθυση ή σμικρυνση στο παραθυρο
-        # self.bg = tk.PhotoImage(file='""C:\\background.png""')#Τοποθετηση εικονας για bg
+      
         folder = Path(__file__).parent
         image_path = Path(folder, "bg.png")
         self.bg = tk.PhotoImage(file=image_path)
@@ -476,7 +476,7 @@ class WelcomePage:
             750, 520, text=self.quote, font=("Open Sans", 25, "bold"), fill="black"
         )  # Δημιουργια κειμενου με text το τυχαιο quote και συνθηκες ωστε να βγαινει στην μεση της σελιδας
 
-        # Δημιουργια των κουμπιων 'Exit' 'Show Statistics' και 'Entry'
+        # Δημιουργια των κουμπιων 'Exit' ' και 'Entry'
         self.b1 = ttk.Button(
             self.w,
             bootstyle="dark-link",
@@ -498,10 +498,6 @@ class WelcomePage:
     def b1_pushed(self):
         self.w.destroy()  # με το πατημα του κουμπιου 'exit' το παραθυρο κλεινει
 
-    def b2_pushed(self):
-        self.w.destroy()
-        # εδω θα ανοιγει το παραθυρο των στατιστικων(συμπληρωση κατα την συνοχη των κωδικων)
-
     def b3_pushed(self):
         appopen()
         # επειδη το προγραμμα δεν δουλευει οταν καταστρεφεται το προηγουμενο παραθυρο με το wm_state("iconic")
@@ -511,6 +507,5 @@ class WelcomePage:
 
 
 root_welcomepage = ttk.Window(themename="purpletheme")
-#root_welcomepage = ttk.Window(themename="litera")
 WelcomePage(root_welcomepage)
-root_welcomepage.mainloop()#
+root_welcomepage.mainloop()
