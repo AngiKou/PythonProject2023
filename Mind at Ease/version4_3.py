@@ -1036,7 +1036,7 @@ class WelcomePage:  # Δημιουργία της κλάσης του παραθ
         # εδω θα ανοιγει το παραθυρο του πολιτη (συμπληρωση κατα την συνοχη των κωδικων)
 
 
-# root_welcomepage = ttk.Window(themename="purpletheme")
-root_welcomepage = ttk.Window(themename="litera")
+root_welcomepage = ttk.Window(themename="purpletheme")
+#root_welcomepage = ttk.Window(themename="litera")
 WelcomePage(root_welcomepage)
 root_welcomepage.mainloop()
