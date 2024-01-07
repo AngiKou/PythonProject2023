@@ -479,13 +479,13 @@ class WelcomePage:
         # Δημιουργια των κουμπιων 'Exit' 'Show Statistics' και 'Entry'
         self.b1 = ttk.Button(
             self.w,
-            bootstyle="light",
+            bootstyle="dark-link",
             text="Exit",
             command=self.b1_pushed,
         )
 
         self.b3 = ttk.Button(
-            self.w, bootstyle="light", text="Entry", command=self.b3_pushed
+            self.w, bootstyle="dark-link", text="Entry", command=self.b3_pushed
         )
 
         # Τοποθετηση των κουμπιων στον κανβα
